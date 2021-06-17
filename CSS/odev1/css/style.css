@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+body {
+    font-family: Roboto;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu a {
+    padding-right: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    text-decoration: none;
+    color: rgb(148, 63, 63);
+}
+
+.main-title {
+    color: rgb(184, 27, 27);
+    text-align: center;
+    font-size: 27px;
+}
+
+.main {
+    list-style-position: inside
+}
+
+.first-page-title {
+    color: purple;
+}
+
+.second-page-title {
+    color: rgb(146, 110, 42);
+}
