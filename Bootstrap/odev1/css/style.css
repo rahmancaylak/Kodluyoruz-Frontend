@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+body {
+    font-family: Roboto;
+}
+
+.navbar-brand {
+    color: rgb(168, 33, 33) !important;
+}
+
+.first-page-title {
+    color: rgb(204, 33, 33);
+}
+
+.second-page-title {
+    color: rgb(146, 110, 42);
+}
+
+.card {
+    height: 100%;
+}
+
+.card-title {
+    color: rgb(148, 30, 148);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
