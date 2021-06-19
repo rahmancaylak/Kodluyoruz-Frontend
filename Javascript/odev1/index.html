@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Kodluyoruz Javascript Saat Ödevi</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #1870ed 0, #f18f88 100%);
+            font-family: 'Montserrat', 'sans-serif';
+            min-height: 100vh;
+            font-size: 24px;
+        }
+        
+        p {
+            font-size: 15px;
+            color: gray;
+        }
+        
+        li>span {
+            font-size: 35px;
+        }
+        
+        li {
+            font-size: 40px;
+        }
+        
+        .card {
+            background-color: #080808;
+            padding: 30px;
+        }
+        
+        .card:hover {
+            background-color: #494646;
+            transition: background-color 0.5s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-dark d-flex align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <img src="assets/kodluyoruz.png">
+                <div class="card">
+                    <div class="card-body text-light text-center text-uppercase">
+                        <h1>Hoş geldin, <span id="yourName"></span></h1>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item p-3"><span id="day"></span><br>
+                                <p>Gün</p>
+                            </li>
+                            <li class="nav-item p-3 d-none d-md-none d-lg-block text-white-50">:</li>
+                            <li class="nav-item p-3"><span id="hours"></span><br>
+                                <p>Saat</p>
+                            </li>
+                            <li class="nav-item p-3 d-none d-md-none d-lg-block text-white-50">:</li>
+                            <li class="nav-item p-3"><span id="minute"></span><br>
+                                <p>Dakika</p>
+                            </li>
+                            <li class="nav-item p-3 d-none d-md-none d-lg-block text-white-50">:</li>
+                            <li class="nav-item p-3"><span id="seconds"></span><br>
+                                <p>Saniye</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <h5 class="text-end fw-bolder">RAHMAN ÇAYLAK</h5>
+            </div>
+        </div>
+    </div>
+    <script>
+        function askName() {
+            // Kullanıcıdan değeri aldık
+            var yourName = prompt("Adınız nedir?");
+            yourName ? yourName : yourName = "NoName";
+            return document.getElementById("yourName").innerText = yourName;
+        }
+
+        function showTime() {
+            var date = new Date(); // Date kütüphanesini çağırıyoruz.
+            var h = date.getHours(); // Kütüphane içinden saati,
+            var m = date.getMinutes(); // dakikayı
+            var s = date.getSeconds(); // saniyeyi
+            var session = date.getDay(); // ve günü alıyoruz.
+            // getDay bize günlerin sayısını döndürür
+            // 1: Pazartesi gibi.
+            switch (session) {
+                case 1:
+                    session = "Pazartesi";
+                    break;
+                case 2:
+                    session = "Salı";
+                    break;
+                case 3:
+                    session = "Çarşamba";
+                    break;
+                case 4:
+                    session = "Perşembe";
+                    break;
+                case 5:
+                    session = "Cuma";
+                    break;
+                case 6:
+                    session = "Cumartesi";
+                    break;
+                default:
+                    session = "Pazar";
+                    break;
+            }
+
+            h = h < 10 ? "0" + h : h;
+            m = m < 10 ? "0" + m : m;
+            s = s < 10 ? "0" + s : s;
+
+            // var time = h + ":" + m + ":" + s + " " + session;
+            // document.getElementById("myClock").innerText = time;
+            // document.getElementById("myClock").textContent = time;
+            document.getElementById("day").innerHTML = session
+            document.getElementById("hours").innerHTML = h;
+            document.getElementById("minute").innerHTML = m;
+            document.getElementById("seconds").innerHTML = s;
+            setTimeout(showTime, 1000);
+        }
+
+        //askName();
+        showTime();
+    </script>
+</body>
+
+</html>
