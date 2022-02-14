@@ -5,7 +5,7 @@ You can check [homework](https://app.patika.dev/moduller/react/odev2) descriptio
 This template created by dmitrysharabin [codepen](https://codepen.io/dmitrysharabin/pen/MWgQNYZ)
 
 ## Output
-![todo-list](https://github.com/rahmancaylak/Kodluyoruz-Frontend/blob/master/React/introduction/homework1/output-homework.PNG?raw=true)
+![todo-list](https://github.com/rahmancaylak/Kodluyoruz-Frontend/blob/master/React/contacts-app/homework2/output-homework.gif?raw=true)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
